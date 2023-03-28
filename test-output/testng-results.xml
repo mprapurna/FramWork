@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[started]]>
+    </line>
+    <line>
+      <![CDATA[Started test :googleCheckFailedTest]]>
+    </line>
+    <line>
+      <![CDATA[verifying]]>
+    </line>
+    <line>
+      <![CDATA[Name of title:infosys - Google Search]]>
+    </line>
+    <line>
+      <![CDATA[The name of the testcase passed is :googleCheckFailedTest]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-03-23T17:12:32 IST" name="Default suite" finished-at="2023-03-23T17:12:43 IST" duration-ms="10624">
+    <groups>
+    </groups>
+    <test started-at="2023-03-23T17:12:32 IST" name="Default test" finished-at="2023-03-23T17:12:43 IST" duration-ms="10624">
+      <class name="UI.GoogleTests">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:UI.GoogleTests@2dc54ad4]" started-at="2023-03-23T17:12:32 IST" name="initialize" finished-at="2023-03-23T17:12:38 IST" duration-ms="5708" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="googleCheckFailedTest()[pri:0, instance:UI.GoogleTests@2dc54ad4]" started-at="2023-03-23T17:12:38 IST" name="googleCheckFailedTest" finished-at="2023-03-23T17:12:42 IST" duration-ms="4235" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Started test :googleCheckFailedTest]]>
+            </line>
+            <line>
+              <![CDATA[verifying]]>
+            </line>
+            <line>
+              <![CDATA[Name of title:infosys - Google Search]]>
+            </line>
+            <line>
+              <![CDATA[The name of the testcase passed is :googleCheckFailedTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- googleCheckFailedTest -->
+        <test-method is-config="true" signature="teradDown()[pri:0, instance:UI.GoogleTests@2dc54ad4]" started-at="2023-03-23T17:12:42 IST" name="teradDown" finished-at="2023-03-23T17:12:43 IST" duration-ms="550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teradDown -->
+      </class> <!-- UI.GoogleTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
