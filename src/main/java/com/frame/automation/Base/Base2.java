@@ -12,40 +12,34 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import com.frame.automation.utilities.Constants;
 import com.frame.automation.utilities.EventCapture;
 
-public class Base {
+public class Base2 {
 	public static WebDriver driver;
 	
-	public Base(){
+	public Base2(){
 		setupDriver("chrome");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	//	driver.get("https://auth.geeksforgeeks.org/");
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		//driver.get("https://auth.geeksforgeeks.org/");
 	//driver.get(Constants.geeksForgeeksurl);
 	//driver.get(Constants.googleurl);
 		 //driver.get(System.getProperty("login.url"));
 	}
 public void setupDriver(String browserName) {
 	if(browserName.equalsIgnoreCase("chrome")) {
-		
-		System.out.println(System.getProperty("user.dir").replace("\\","/"));
-		String ProjectPath=System.getProperty("user.dir").replace("\\","/");
-		ProjectPath+="/drivers/Chrome/chromedriver.exe";
-		System.out.println("porjectpath ="+ProjectPath);
-		System.setProperty("webdriver.chrome.driver",ProjectPath);
-		//System.setProperty("webdriver.chorme.driver", 
-				//System.getProperty("user.dir")+File.separator+"Drivers"+File.separator+"chromedriver.exe");
-		ChromeOptions options=new ChromeOptions();
+		System.setProperty("webdriver.chorme.driver", 
+				System.getProperty("user.dir")+File.separator+"drivers"+File.separator+"chromedriver.exe");
+		/*ChromeOptions options=new ChromeOptions();
 		//String url="http://demo.guru99.com/test/simple_context_menu.html";
 		options.addArguments("--inconginto");
-		options.addArguments("--remote-allow-origins=*");
+		//options.addArguments("--remote-allow-origins=*");
 		//options.addArguments("--headless");
 		options.addArguments("start-maximized");
 		//options.addExtensions(new File("C:\\Users\\Admin\\Downloads\\extension_3_1_3_0.crx"));
 	    DesiredCapabilities ds=new DesiredCapabilities();
 	    ds.setCapability(ChromeOptions.CAPABILITY, options);
 	    options.merge(ds);
-		driver= new ChromeDriver(options);	
-		//driver= new ChromeDriver();	
+		driver= new ChromeDriver(options);	*/
+		driver= new ChromeDriver();	
 	/*	EventFiringWebDriver eventRecorder = new EventFiringWebDriver(driver); 		
 	EventCapture eCapture = new EventCapture();
 		

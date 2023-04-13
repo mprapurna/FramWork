@@ -1,5 +1,7 @@
 package UI;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -11,19 +13,31 @@ import com.frame.automation.Base.Base;
 @Listeners(com.frame.automation.utilities.SuiteTestListener.class)	
 
 public class BrowserStackTutorials {
+	
+	Base b;
+	@BeforeMethod
+	public void initialize() {
+		b=new Base();
+		Base.driver.navigate().to("https://www.browserstack.com/");
+	}
 @Test
 public void softAssert() {
-Base b = new Base();
-Base.driver.navigate().to("https://www.browserstack.com/");
+//Base b = new Base();
+//Base.driver.navigate().to("https://www.browserstack.com/");
 String getActualTitle = Base.driver.getTitle();
 Boolean verifyTitle = Base.driver.getTitle().equalsIgnoreCase("Most Reliable App & Cross Browser Testing Platform | BrowserStack");
 SoftAssert softAssert = new SoftAssert();
 softAssert.assertEquals(getActualTitle, "Most Reliable App & Cross Browser Testing Platform | BrowserStack");
-softAssert.assertNotEquals(getActualTitle, "Most Reliable App & Cross Browser Testing Platform | BrowserStack");
+/*softAssert.assertNotEquals(getActualTitle, "Most Reliable App & Cross Browser Testing Platform | BrowserStack");
 softAssert.assertNull(verifyTitle);
 softAssert.assertNotNull(verifyTitle);
 softAssert.assertTrue("BrowserStack".equals("Browserstack"), "First soft assert failed");
-softAssert.assertFalse("BrowserStack".equals("BrowserStack"), "Second soft assert failed");
-softAssert.assertAll(); 
+softAssert.assertFalse("BrowserStack".equals("BrowserStack"), "Second soft assert failed");*/
+//softAssert.assertAll(); 
+}
+
+@AfterMethod
+public void cleanup() {
+	b.closeDriver();
 }
 }

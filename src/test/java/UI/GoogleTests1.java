@@ -16,6 +16,7 @@ import com.frame.automation.Base.Base;
 import com.frame.automation.events.GooglePageEvents;
 import com.frame.automation.events.HomePageEvents;
 import com.frame.automation.events.LoginPageEvents;
+import com.frame.automation.utilities.Constants;
 
 @Listeners(com.frame.automation.utilities.SuiteTestListener.class)	
 
@@ -26,6 +27,7 @@ Base b;
 @BeforeMethod
 public void initialize() {
 	 b=new Base();
+	 Base.driver.get(Constants.googleurl);
 }
 
 @Test
